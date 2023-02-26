@@ -6,8 +6,10 @@ if(isset($_POST['send'])){
 
    $name = mysqli_real_escape_string($conn, $_POST['name']);
    $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $number = mysqli_real_escape_string($conn, $_POST['number']);
+   $number = mysqli_real_escape_string($conn, $_POST['contact']);
    $msg = mysqli_real_escape_string($conn, $_POST['message']);
+
+   echo sendMail($email);
 
    $select_message = mysqli_query($conn, "SELECT * FROM `contact_form` WHERE name = '$name' AND email = '$email' AND number = '$number' AND message = '$msg'") or die('query failed');
    
@@ -21,6 +23,9 @@ if(isset($_POST['send'])){
 }
 
 ?>
+sendMail{
+
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +33,7 @@ if(isset($_POST['send'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-AUA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Complete Responsive Personal Portfolio Website Design</title>
+   <title>Kututa, Mr Website Designer</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
@@ -63,7 +68,7 @@ if(isset($message)){
 
    <div id="menu-btn" class="fas fa-bars"></div>
 
-   <a href="#home" class="logo">Portfolio</a>
+   <a href="#home" class="logo"><i>Web programmer</i></a>
 
    <nav class="navbar">
       <a href="#home" class="active">home</a>
@@ -94,9 +99,9 @@ if(isset($message)){
    </div>
 
    <div class="content">
-      <h3 data-aos="fade-up">hi, i am sana shaikh</h3>
+      <h3 data-aos="fade-up">hi, i am Vincent kututa</h3>
       <span data-aos="fade-up">web designer & developer</span>
-      <p data-aos="fade-up">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis labore recusandae minima molestias aliquam nostrum.</p>
+      <p data-aos="fade-up"> I, do designing and building the interface, navigation and aesthetic of websites for businesses and clients.</p>
       <a data-aos="fade-up" href="#about" class="btn">about me</a>
    </div>
 
@@ -112,14 +117,14 @@ if(isset($message)){
 
    <div class="biography">
 
-      <p data-aos="fade-up">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tenetur amet ab optio minus est error libero adipisci numquam ratione.</p>
+      <p data-aos="fade-up">Lorem,</p>
 
       <div class="bio">
-         <h3 data-aos="zoom-in"> <span>name : </span> sana shaikh </h3>
-         <h3 data-aos="zoom-in"> <span>email : </span> sanashaikh@gmail.com </h3>
-         <h3 data-aos="zoom-in"> <span>address : </span> mumbai, india </h3>
-         <h3 data-aos="zoom-in"> <span>phone : </span> +123-456-7890 </h3>
-         <h3 data-aos="zoom-in"> <span>age : </span> 22 years </h3>
+         <h3 data-aos="zoom-in"> <span>name : </span> vincent kututa </h3>
+         <h3 data-aos="zoom-in"> <span>email : </span> vinnykututa@gmail.com </h3>
+         <h3 data-aos="zoom-in"> <span>address : </span> mombasa, kenya </h3>
+         <h3 data-aos="zoom-in"> <span>phone : </span> (+254)769275595 </h3>
+         <h3 data-aos="zoom-in"> <span>age : </span> 24 years </h3>
          <h3 data-aos="zoom-in"> <span>experience : </span> 2+ years </h3>
       </div>
 
@@ -151,21 +156,21 @@ if(isset($message)){
             <h3 class="title" data-aos="fade-right">education</h3>
 
             <div class="box" data-aos="fade-right">
-               <span>( 2019 - 2020 )</span>
+               <span>( 2020 - 2022 )</span>
                <h3>web designer</h3>
-               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda, eaque sequi repellat natus quia.</p>
+               <p></p>
             </div>
 
             <div class="box" data-aos="fade-right">
-               <span>( 2020 - 2021 )</span>
+               <span>( 2020 - 2022 )</span>
                <h3>web developer</h3>
-               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda, eaque sequi repellat natus quia.</p>
+               <p></p>
             </div>
 
             <div class="box" data-aos="fade-right">
                <span>( 2021 - 2022 )</span>
                <h3>graphic designer</h3>
-               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda, eaque sequi repellat natus quia.</p>
+               <p>.</p>
             </div>
 
          </div>
@@ -175,21 +180,21 @@ if(isset($message)){
             <h3 class="title" data-aos="fade-left">experience</h3>
 
             <div class="box" data-aos="fade-left">
-               <span>( 2019 - 2020 )</span>
+               <span>( 2020 - 2023 )</span>
                <h3>front-end developer</h3>
-               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda, eaque sequi repellat natus quia.</p>
+               <p>.</p>
             </div>
 
             <div class="box" data-aos="fade-left">
-               <span>( 2020 - 2021 )</span>
+               <span>( 2020 - 2022 )</span>
                <h3>back-end developer</h3>
-               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda, eaque sequi repellat natus quia.</p>
+               <p>.</p>
             </div>
 
             <div class="box" data-aos="fade-left">
-               <span>( 2021 - 2022 )</span>
+               <span>( 2022 - 2023 )</span>
                <h3>full-stack developer</h3>
-               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda, eaque sequi repellat natus quia.</p>
+               <p>Lorem,.</p>
             </div>
 
          </div>
@@ -213,37 +218,37 @@ if(isset($message)){
       <div class="box" data-aos="zoom-in">
          <i class="fas fa-code"></i>
          <h3>web development</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, placeat veritatis accusantium nostrum rem ipsa.</p>
+         <p></p>
       </div>
 
       <div class="box" data-aos="zoom-in">
          <i class="fas fa-paint-brush"></i>
          <h3>graphic design</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, placeat veritatis accusantium nostrum rem ipsa.</p>
+         <p></p>
       </div>
 
       <div class="box" data-aos="zoom-in">
          <i class="fab fa-bootstrap"></i>
          <h3>bootstrap</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, placeat veritatis accusantium nostrum rem ipsa.</p>
+         <p></p>
       </div>
 
       <div class="box" data-aos="zoom-in">
          <i class="fas fa-chart-line"></i>
-         <h3>seo marketing</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, placeat veritatis accusantium nostrum rem ipsa.</p>
+         <h3>Computer servicing and maintainance</h3>
+         <p></p>
       </div>
 
       <div class="box" data-aos="zoom-in">
          <i class="fas fa-bullhorn"></i>
          <h3>digital marketing</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, placeat veritatis accusantium nostrum rem ipsa.</p>
+         <p></p>
       </div>
 
       <div class="box" data-aos="zoom-in">
          <i class="fab fa-wordpress"></i>
          <h3>wordpress</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, placeat veritatis accusantium nostrum rem ipsa.</p>
+         <p></p>
       </div>
 
    </div>
@@ -308,14 +313,14 @@ if(isset($message)){
 
    <h1 class="heading" data-aos="fade-up"> <span>contact me</span> </h1>
 
-   <form action="" method="post">
+   <form action="" id="clientMessage" method="post">
       <div class="flex">
-         <input data-aos="fade-right" type="text" name="name" placeholder="enter your name" class="box" required>
-         <input data-aos="fade-left" type="email" name="email" placeholder="enter your email" class="box" required>
+         <input data-aos="fade-right" type="text" id="name" name="name" placeholder="enter your name" class="box" required>
+         <input data-aos="fade-left" type="email" id="email" name="email" placeholder="enter your email" class="box" required>
       </div>
-      <input data-aos="fade-up" type="number" min="0" name="number" placeholder="enter your number" class="box" required>
-      <textarea data-aos="fade-up" name="message" class="box" required placeholder="enter your message" cols="30" rows="10"></textarea>
-      <input type="submit" data-aos="zoom-in" value="send message" name="send" class="btn">
+      <input data-aos="fade-up" type="text" min="0" name="contact" placeholder="enter your number" class="box" required>
+      <textarea data-aos="fade-up" name="message" id="message" class="box" required placeholder="enter your message" cols="30" rows="10"></textarea>
+      <input type="submit" data-aos="zoom-in" value="submit" name="submit" class="btn">
    </form>
 
    <div class="box-container">
@@ -323,19 +328,19 @@ if(isset($message)){
       <div class="box" data-aos="zoom-in">
          <i class="fas fa-phone"></i>
          <h3>phone</h3>
-         <p>+123-456-7890</p>
+         <p>(+254)769275595</p>
       </div>
 
       <div class="box" data-aos="zoom-in">
          <i class="fas fa-envelope"></i>
          <h3>email</h3>
-         <p>sanashaikh@gmail.com</p>
+         <p>vinnykututa@gmail.com</p>
       </div>
 
       <div class="box" data-aos="zoom-in">
          <i class="fas fa-map-marker-alt"></i>
          <h3>address</h3>
-         <p>mumbai, india - 400104</p>
+         <p>Mombasa, Kenya - 80100</p>
       </div>
 
    </div>
@@ -344,7 +349,7 @@ if(isset($message)){
 
 <!-- contact section ends -->
 
-<div class="credit"> &copy; copyright @ <?php echo date('Y'); ?> by <span>mr. web designer</span> </div>
+<div class="credit"> &copy; copyright @ <?php echo date('Y'); ?> by <span>vincent kututa</span> </div>
 
 
 
